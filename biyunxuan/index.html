@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="碧云轩官方网站 - 专注中式传统建筑设计与园林景观规划，提供古建筑修复、中式别墅设计及园林施工服务，传承东方美学。">
+    <meta name="keywords" content="碧云轩,中式建筑,园林设计,古建修复,别墅设计">
+    <title>碧云轩-中式传统建筑与园林景观设计服务商</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5D4037; /* 深褐，代表木材与稳重 */
+            --secondary-color: #8D6E63; /* 浅褐，用于背景 */
+            --accent-color: #D7CCC8; /* 米色，用于辅助背景 */
+            --text-main: #3E2723;
+            --text-light: #795548;
+            --white: #FFFFFF;
+            --bg-light: #F5F5F0;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 2px;
+            font-weight: 500;
+            border: 1px solid var(--primary-color);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            font-weight: normal;
+            margin-left: 5px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 600px;
+            background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('https://picsum.photos/seed/archi1/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .hero-content .btn {
+            font-size: 1.1rem;
+            padding: 12px 35px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Projects Showcase */
+        .showcase {
+            padding: 80px 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .project-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .project-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .project-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .project-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 4px;
+            box-shadow: 20px 20px 0 var(--accent-color);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--accent-color);
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #dcdcdc;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 22%;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background-color: var(--white);
+            border: 2px solid var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .step-item:hover .step-number {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        .step-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-list li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 4px;
+            color: var(--text-main);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(93, 64, 55, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3E2723;
+            color: #A1887F;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-wrapper nav {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            }
+
+            .nav-wrapper nav.active {
+                display: flex;
+            }
+
+            .nav-wrapper nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .about-wrapper {
+                flex-direction: column;
+            }
+
+            .about-image img {
+                box-shadow: 10px 10px 0 var(--accent-color);
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step-item {
+                width: 100%;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">碧云轩<span>古建园林</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#projects">案例展示</a></li>
+                    <li><a href="#process">设计流程</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>筑造东方雅境</h1>
+            <p>碧云轩专注中式传统建筑设计与园林景观规划，将古典美学与现代工艺完美融合，为您打造传承千年的居住意境。</p>
+            <a href="#contact" class="btn">预约设计咨询</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心服务</h2>
+                <p>从古建修复到现代中式园林，我们提供全方位的解决方案</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-item">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>中式别墅设计</h3>
+                    <p>新中式风格独栋别墅、合院设计，体现现代生活的舒适与传统文化的底蕴。</p>
+                </article>
+                <article class="feature-item">
+                    <div class="feature-icon">🌳</div>
+                    <h3>园林景观规划</h3>
+                    <p>私家花园、庭院景观、生态驳岸设计，营造步移景异的山水意境。</p>
+                </article>
+                <article class="feature-item">
+                    <div class="feature-icon">🔨</div>
+                    <h3>古建修复工程</h3>
+                    <p>专业古建筑修缮、仿古建筑施工，严格遵循传统营造法式，修旧如旧。</p>
+                </article>
+                <article class="feature-item">
+                    <div class="feature-icon">✏️</div>
+                    <h3>室内软装陈设</h3>
+                    <p>中式家具定制、红木工艺、字画装饰，完善空间意境的最后一公里。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/woodwork/600/400" alt="碧云轩设计团队">
+                </div>
+                <div class="about-content">
+                    <h2>传承匠心，筑梦东方</h2>
+                    <p>碧云轩成立于2005年，是一家集建筑设计、园林规划、工程施工及古建修复于一体的综合性设计机构。我们深谙中国传统建筑文化的精髓，致力于在现代都市中重现古典园林的雅致与宁静。</p>
+                    <p>团队成员由资深建筑师、园林景观设计师及传统木工大师组成，拥有丰富的实战经验。我们坚持“尊重历史，创新未来”的设计理念，每一个项目都是对东方美学的致敬。</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>18+</h4>
+                            <span>年行业经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>200+</h4>
+                            <span>完成项目</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <span>专业工匠</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section id="projects" class="showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2>精选案例</h2>
+                <p>用作品说话，见证每一处细节的完美呈现</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/garden1/600/400" alt="江南私家园林项目">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">园林景观</span>
+                        <h3>江南私家园林改造</h3>
+                        <p>在寸土寸金的城市中，通过借景、漏景手法，打造出一步一景的江南韵味。</p>
+                        <a href="#" class="project-link">查看详情</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/temple/600/400" alt="古寺庙修复工程">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">古建修复</span>
+                        <h3>古寺庙修复工程</h3>
+                        <p>采用传统榫卯结构，修复千年古刹，保留历史沧桑感，重现庄严佛国。</p>
+                        <a href="#" class="project-link">查看详情</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/villa/600/400" alt="新中式别墅设计">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">别墅设计</span>
+                        <h3>西山新中式别墅</h3>
+                        <p>结合现代居住功能与古典建筑美学，打造低调奢华的隐居之所。</p>
+                        <a href="#" class="project-link">查看详情</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/interior/600/400" alt="中式室内装修">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">室内装修</span>
+                        <h3>新中式茶室空间</h3>
+                        <p>以原木为主色调，配合光影变化，营造禅意十足的品茗空间。</p>
+                        <a href="#" class="project-link">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>设计流程</h2>
+                <p>标准化服务流程，确保项目从构想到落地的完美执行</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>需求沟通</h3>
+                    <p>深入了解客户的文化背景与居住需求，确立设计方向。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>方案设计</h3>
+                    <p>绘制平面图、效果图及施工图，进行多轮方案推敲与修改。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>施工监理</h3>
+                    <p>资深工匠现场指导，严格把控施工质量与工艺细节。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>软装陈设</h3>
+                    <p>家具定制与配饰搭配，完善空间格调，营造最终氛围。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>开启您的雅致生活</h2>
+                    <p>无论您是拥有私家庭院，还是计划进行古建修复，碧云轩都期待与您沟通。</p>
+                    <ul class="info-list">
+                        <li>地址：中国·苏州市吴中区传统文化产业园A座</li>
+                        <li>电话：0512-8888 6666</li>
+                        <li>邮箱：contact@biyunxuan.com</li>
+                        <li>工作时间：周一至周日 9:00 - 18:00</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快联系您。');">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" class="form-control" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="请输入手机号码" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">咨询内容</label>
+                            <textarea id="message" class="form-control" placeholder="请简述您的需求或项目概况"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">提交咨询</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 碧云轩古建园林设计有限公司 版权所有</p>
+            <p>苏ICP备12345678号 | 专注中式建筑与园林设计服务</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
+                    
+                    // Smooth scroll to section
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            }
+        });
+    </script>
+</body>
+  </html>
