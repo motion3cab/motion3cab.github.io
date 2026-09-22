@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gfax网络传真平台提供安全、高效、环保的在线传真服务。支持云传真、手机发传真、批量发送及文件格式转换，无需传真机即可随时随地收发传真。">
+    <meta name="keywords" content="gfax网络传真,在线传真,云传真,手机发传真,电子传真,免费传真">
+    <title>Gfax网络传真 - 安全便捷的云传真服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --secondary-color: #f0f7ff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #ffffff;
+            --bg-section: #f9fafb;
+            --border-color: #e5e7eb;
+            --radius-md: 8px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary-color); }
+        .mb-1 { margin-bottom: 8px; }
+        .mb-2 { margin-bottom: 16px; }
+        .mb-4 { margin-bottom: 32px; }
+        .mt-2 { margin-top: 16px; }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* How it Works */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: var(--bg-section);
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 24px;
+        }
+
+        .step-item h3 {
+            margin-bottom: 12px;
+        }
+
+        .step-item p {
+            color: var(--text-secondary);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .plan-name {
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+        }
+
+        .plan-features {
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .plan-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        .check-icon {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--bg-section);
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .faq-question:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 60px 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .pricing-card { max-width: 500px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for mobile */
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text p { margin: 0 auto 32px; }
+            .hero-actions { justify-content: center; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-col p { margin: 0 auto 20px; }
+            .hero-text h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper flex justify-between items-center">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Gfax网络传真
+            </a>
+            <nav class="nav-links">
+                <a href="#features" class="active">核心功能</a>
+                <a href="#how-it-works">使用流程</a>
+                <a href="#pricing">资费标准</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">免费注册</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>告别传统传真机，<br>Gfax让商务沟通更高效</h1>
+                    <p>Gfax网络传真服务为您提供安全、环保、便捷的云传真解决方案。无需传真机，无需纸张，通过手机、电脑或网页即可轻松收发全球传真。</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary" style="padding: 14px 32px; font-size: 16px;">立即免费试用</a>
+                        <a href="#how-it-works" class="btn btn-outline" style="padding: 14px 32px; font-size: 16px;">了解如何使用</a>
+                    </div>
+                    <div class="mt-2" style="font-size: 13px; color: #999;">
+                        <span style="margin-right: 15px;">✓ 支持 PDF/Word/图片</span>
+                        <span>✓ 7x24小时全天候服务</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/gfax_hero/600/400" alt="Gfax网络传真工作界面示意图" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择 Gfax 网络传真？</h2>
+                    <p>传统传真已无法满足现代企业的需求，Gfax 提供全方位的数字化传真解决方案。</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </div>
+                        <h3>手机随时随地发传真</h3>
+                        <p>无需安装任何软件，通过微信小程序或手机APP，将文档转换为传真发送，随时随地处理商务文件。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>云端存储与归档</h3>
+                        <p>所有收到的传真自动上传至云端，支持搜索、预览和下载。历史记录永久保存，方便随时查阅。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>企业级安全加密</h3>
+                        <p>采用银行级加密技术保障数据传输安全，支持企业统一管理，可设置权限与发送限额。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>全球覆盖无障碍</h3>
+                        <p>支持全球 190+ 个国家与地区发送传真，无论客户身在何处，都能确保文件准时送达。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>自动批量发送</h3>
+                        <p>支持 Excel 批量导入联系人，自动识别号码格式，一键群发合同、报价单等重要文件。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </div>
+                        <h3>多格式文档支持</h3>
+                        <p>支持 Word、PDF、Excel、JPG、PNG 等多种常用文档格式，系统自动进行格式转换与排版优化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>简单三步，开启云传真之旅</h2>
+                    <p>无需复杂的设备，几分钟即可完成设置并开始使用。</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>注册账号</h3>
+                        <p>填写企业信息，绑定手机号码，即可获得专属的传真号码（支持国内区号）。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>发送文档</h3>
+                        <p>在电脑端网页、手机APP或微信小程序中选择文档，输入对方传真号码即可发送。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>接收传真</h3>
+                        <p>无需等待，系统自动接收并上传云端。您可以通过网页、邮件或微信随时查收。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>灵活的资费方案</h2>
+                    <p>按需选择，无隐藏费用，发送越多越实惠。</p>
+                </div>
+                <div class="grid grid-3" style="max-width: 1000px; margin: 0 auto;">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">基础版</h3>
+                        <div class="price">¥0<span>/月</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 100页/月发送额度</li>
+                            <li><span class="check-icon">✓</span> 每日100次发送限制</li>
+                            <li><span class="check-icon">✓</span> 基础云存储空间</li>
+                            <li><span class="check-icon">✓</span> 邮件接收通知</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">立即注册</a>
+                    </div>
+                    
+                    <!-- Pro Plan -->
+                    <div class="pricing-card popular">
+                        <div class="popular-tag">最受欢迎</div>
+                        <h3 class="plan-name">专业版</h3>
+                        <div class="price">¥29<span>/月</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 3000页/月发送额度</li>
+                            <li><span class="check-icon">✓</span> 无每日发送限制</li>
+                            <li><span class="check-icon">✓</span> 10GB 云存储空间</li>
+                            <li><span class="check-icon">✓</span> 微信/短信接收通知</li>
+                            <li><span class="check-icon">✓</span> 优先技术支持</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">免费试用30天</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">企业版</h3>
+                        <div class="price">¥99<span>/月</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 无限发送页数</li>
+                            <li><span class="check-icon">✓</span> 多人账号协同管理</li>
+                            <li><span class="check-icon">✓</span> 50GB 云存储空间</li>
+                            <li><span class="check-icon">✓</span> API接口对接</li>
+                            <li><span class="check-icon">✓</span> 专属客户经理</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">联系销售</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于 Gfax 网络传真的常见疑问，这里都有答案。</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">Gfax 网络传真的发送速度有多快？<span class="arrow">+</span></div>
+                        <div class="faq-answer">Gfax 利用专线网络进行数据传输，通常发送速度比传统电话拨号传真快 3-5 倍。在信号良好的情况下，文件发送几乎是瞬间完成的。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">收到的传真格式会乱码吗？<span class="arrow">+</span></div>
+                        <div class="faq-answer">不会。Gfax 系统会自动对文档进行高清扫描和格式优化，确保发送到对方传真机上的文件清晰、排版整齐，不会出现乱码或模糊。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持发送到哪些国家的传真机？<span class="arrow">+</span></div>
+                        <div class="faq-answer">Gfax 支持全球 190 多个国家和地区的传真机，无论是国内还是海外，都能确保商务文件准时送达。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果对方传真机占线怎么办？<span class="arrow">+</span></div>
+                        <div class="faq-answer">系统会自动重试发送，通常在 3-5 分钟内会再次尝试。如果多次尝试失败，我们会发送通知短信告知您发送状态。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: #fff; margin-bottom: 16px; display: inline-flex;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Gfax网络传真
+                    </a>
+                    <p>致力于为中小企业提供最稳定、最便捷的在线传真解决方案，助力企业数字化转型，提升办公效率。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">个人云传真</a></li>
+                        <li><a href="#">企业版传真</a></li>
+                        <li><a href="#">微信小程序</a></li>
+                        <li><a href="#">API 接口</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">计费说明</a></li>
+                        <li><a href="#">安全中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">服务热线：400-123-4567</a></li>
+                        <li><a href="#">商务合作：bd@gfax.com</a></li>
+                        <li><a href="#">公司地址：北京市海淀区科技园路88号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gfax网络传真平台 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                
+                // Optional: Close others
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
