@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="空调选购指南：涵盖中央空调、挂壁式空调、立柜式空调的对比评测、能效等级解析及安装维护保养技巧，助您打造舒适节能的家居环境。">
+    <meta name="keywords" content="kongtiao,空调,空调选购,中央空调,空调安装,空调保养">
+    <title>kongtiao-空调选购指南与安装维护全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0088cc;
+            --primary-dark: #006699;
+            --accent-color: #ff9900;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f4f6f9;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f0f2f5;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding-left: 10px;
+            width: 200px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(0, 136, 204, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Grid Layouts */
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-img {
+            height: 200px;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .card-tag {
+            background: #f0f7fa;
+            color: var(--primary-dark);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background: var(--bg-card);
+            padding: 50px 0;
+            margin-bottom: 60px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background: #f9f9f9;
+            font-weight: 600;
+            width: 20%;
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Installation Guide */
+        .guide-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .guide-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: #eee;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-card);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: var(--bg-card);
+            padding: 50px 0;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            .nav-menu {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .guide-steps::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M8 6h8"/><path d="M8 10h8"/><path d="M8 14h8"/><path d="M8 18h8"/><path d="M4 10h2"/><path d="M18 10h2"/><path d="M4 14h2"/><path d="M18 14h2"/><path d="M4 18h2"/><path d="M18 18h2"/></svg>
+                <span>智选家</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">中央空调</a>
+                <a href="#">挂壁式空调</a>
+                <a href="#">立柜空调</a>
+                <a href="#">配件与安装</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索空调型号或知识...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>kongtiao 选购指南</h1>
+                    <div class="hero-tags">
+                        <span class="tag">节能省电</span>
+                        <span class="tag">静音设计</span>
+                        <span class="tag">健康除菌</span>
+                    </div>
+                    <p>无论是炎炎夏日还是寒冬腊月，一台合适的空调能让您的家成为舒适港湾。本站提供全方位的空调选购建议、参数解析及安装维护干货。</p>
+                    <a href="#comparison" class="cta-button">开始选购</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/airconditioner1/600/400" alt="现代简约空调室内机">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Grid -->
+        <section class="container">
+            <div class="section-title">
+                <h2>热门类型推荐</h2>
+                <a href="#">查看全部分类 &rarr;</a>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/centralac/400/300" alt="中央空调">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">中央空调系统</h3>
+                        <p class="card-desc">适合大户型与别墅，美观隐形，风感柔和，但安装成本较高，需专业团队设计。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">适合：100㎡以上</span>
+                            <span>阅读 2.4w</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/windowac/400/300" alt="挂壁式空调">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">挂壁式空调</h3>
+                        <p class="card-desc">性价比之选，安装灵活，即买即用。适合卧室、书房等中小空间，是目前最主流的选择。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">适合：10-30㎡</span>
+                            <span>阅读 5.1w</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/floorac/400/300" alt="立柜式空调">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">立柜式空调</h3>
+                        <p class="card-desc">制冷/制热速度快，风量大，适合客厅或大空间。外观大气，是客厅装修的点睛之笔。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">适合：30-60㎡</span>
+                            <span>阅读 3.8w</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>三大类型深度对比</h2>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>对比维度</th>
+                            <th>中央空调</th>
+                            <th>挂壁式空调</th>
+                            <th>立柜式空调</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>美观度</strong></td>
+                            <td>极佳，隐藏式安装</td>
+                            <td>中等，需挂在墙上</td>
+                            <td>中等，占用地面空间</td>
+                        </tr>
+                        <tr>
+                            <td><strong>能耗与能效</strong></td>
+                            <td>一级能效为主，全屋恒温更省电</td>
+                            <td>单台控制，局部制冷</td>
+                            <td>单台控制，大风量</td>
+                        </tr>
+                        <tr>
+                            <td><strong>安装难度</strong></td>
+                            <td>高，需吊顶和管道工程</td>
+                            <td>低，只需打孔</td>
+                            <td>中等，需预留位置</td>
+                        </tr>
+                        <tr>
+                            <td><strong>适用场景</strong></td>
+                            <td>别墅、大平层、精装房</td>
+                            <td>卧室、书房、出租屋</td>
+                            <td>客厅、大会议室</td>
+                        </tr>
+                        <tr>
+                            <td><strong>维修成本</strong></td>
+                            <td>单台故障不影响其他区域</td>
+                            <td>单台故障不影响其他区域</td>
+                            <td>单台故障不影响其他区域</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Installation Guide -->
+        <section class="container">
+            <div class="section-title">
+                <h2>安装与保养指南</h2>
+            </div>
+            <div class="guide-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">科学选位</h3>
+                    <p class="step-desc">出风口不应直吹人体，避免冷热风直吹。挂机高度建议离地2.5米以上，柜机应离地1.5米。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">规范安装</h3>
+                    <p class="step-desc">确保铜管连接紧密，保温层厚度达标。冷凝水管需有坡度，防止积水倒灌。必须加装止回阀。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">定期清洗</h3>
+                    <p class="step-desc">每季度清洗滤网，每年清洗蒸发器和冷凝器。使用专用清洁剂可去除内部污垢，提升制冷效率。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">空调怎么选制冷量/制热量？</div>
+                        <div class="faq-answer">制冷量（W）= 房间面积（㎡）× 150-220W。例如20平米房间，建议选择3000W-5000W的空调。制热量则需考虑楼层、朝向及密封性，建议适当增加。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">新装空调有异味怎么办？</div>
+                        <div class="faq-answer">新安装的空调在使用前应进行彻底的清洗和消毒。如果仍有异味，可能是安装过程中产生的灰尘或冷凝水盘滋生细菌，建议联系专业人员清洗。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">变频空调和定频空调哪个好？</div>
+                        <div class="faq-answer">变频空调通过调节压缩机转速实现恒温，舒适度高且更省电，适合长时间开启。定频空调结构简单、价格便宜，适合对温度敏感度不高的短期使用场景。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">空调噪音大是什么原因？</div>
+                        <div class="faq-answer">可能是室外机安装不平稳、风扇叶片积灰、压缩机老化或制冷剂不足。建议先检查安装螺丝，再进行深度清洁或联系售后检修。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>智选家 - 空调百科</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">专注于家电选购知识分享，为您提供客观、专业的空调购买建议与使用指南。让每一次点击都更有价值。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">中央空调品牌</a></li>
+                        <li><a href="#">挂壁式空调</a></li>
+                        <li><a href="#">立柜空调</a></li>
+                        <li><a href="#">新风空调</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>使用帮助</h4>
+                    <ul>
+                        <li><a href="#">安装规范</a></li>
+                        <li><a href="#">清洗保养</a></li>
+                        <li><a href="#">故障排查</a></li>
+                        <li><a href="#">能效标准</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>合作建议</li>
+                        <li>内容投稿</li>
+                        <li>版权声明</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 智选家. All Rights Reserved. 本站内容仅供参考，具体产品参数请以官方发布为准。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                          </html>
