@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战场原黑仪h - 深度角色解析与同人作品鉴赏</title>
+    <meta name="description" content="本站提供关于战场原黑仪的详细角色设定、性格分析及同人创作鉴赏。包含不同风格的角色插画展示与故事情节讨论，旨在为喜爱该角色的用户提供一个集中的内容交流平台。">
+    <meta name="keywords" content="战场原黑仪, 战场原黑仪h, 气愤, 赖子, 神原秋人, 物语系列, 同人, 角色解析">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 内容网格 */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+        }
+
+        /* 通用卡片样式 */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            color: var(--primary-color);
+        }
+
+        /* 角色档案 */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #ddd;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f0f2f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* 画廊/作品展示 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 15px;
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* 侧边栏 */
+        .sidebar-widget {
+            margin-bottom: 24px;
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .list-item .icon {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 状态标签 */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status-badge.female {
+            background-color: #fce4ec;
+            color: #c2185b;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>◆</span> 角色志
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色档案</a></li>
+                    <li><a href="#">同人画廊</a></li>
+                    <li><a href="#">剧情解析</a></li>
+                    <li><a href="#">讨论区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>战场原黑仪</h1>
+            <p>“愤怒是美丽的。”<br>来自《物语系列》的标志性角色，以其独特的性格与复杂的内心世界吸引着无数读者。</p>
+        </section>
+
+        <div class="content-grid">
+            <!-- 左侧主要内容 -->
+            <div class="main-content">
+                
+                <!-- 角色基础信息 -->
+                <article class="card">
+                    <h2 class="section-title">角色基础档案</h2>
+                    <div class="profile-grid">
+                        <img src="https://picsum.photos/seed/kashiwagi/400/400.jpg" alt="战场原黑仪角色插画" class="profile-img">
+                        <div class="profile-info">
+                            <span class="status-badge female">女</span>
+                            <span class="tag">10月31日</span>
+                            <span class="tag">天秤座</span>
+                            <h3>战场原 黑仪</h3>
+                            <p style="margin-bottom: 12px;">神原秋人的同班同学，同时也是他邻居。因严重的足癖（踩脚癖）导致无法正常行走，平时依靠轮椅代步，但性格坚强且自尊心极强。</p>
+                            <p>她常被形容为“像猫一样”，既有慵懒的一面，也有爆发性愤怒的一面。她是《伤物语》篇章中推动剧情发展的关键人物。</p>
+                            <div style="margin-top: 20px;">
+                                <a href="#" class="btn">查看详细设定</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 角色特质分析 -->
+                <article class="card">
+                    <h2 class="section-title">性格特质与心理分析</h2>
+                    <p><strong>外表与内心的反差：</strong> 战场原黑仪在大多数人眼中是一个优雅、高傲且有些挑剔的少女。然而，她内心深处却极度缺乏安全感，这种不安全感源于她童年时期的肥胖经历以及后来形成的足癖。</p>
+                    <br>
+                    <p><strong>“愤怒”的美学：</strong> 她最著名的台词是“愤怒是美丽的”。这并非指真正的暴力，而是一种表达自我、宣泄情绪的方式。当她的自尊心受挫或被误解时，她会表现出惊人的爆发力。这种性格使得她在面对阿良良木历时，既有互相试探的博弈，也有逐渐建立信任的过程。</p>
+                    <br>
+                    <h3>常见互动模式</h3>
+                    <ul style="list-style: none; margin-top: 15px;">
+                        <li style="margin-bottom: 10px;">• <strong>对秋人：</strong> 始于一种基于“踩脚”的怪癖式吸引，后转变为一种复杂的、既想依赖又想独立的情感。</li>
+                        <li style="margin-bottom: 10px;">• <strong>对历：</strong> 将阿良良木历视为一种“特别的观察对象”，通过言语上的攻击和反讽来掩饰自己的在意。</li>
+                    </ul>
+                </article>
+
+                <!-- 同人作品展示 (对应搜索意图) -->
+                <article class="card">
+                    <h2 class="section-title">同人创作与鉴赏</h2>
+                    <p style="margin-bottom: 20px;">作为《物语系列》中极具魅力的角色，战场原黑仪在二次创作中拥有极高的人气。以下展示部分基于该角色的同人艺术风格与作品分类。</p>
+                    
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/kashiwagi1/300/400.jpg" alt="黑仪同人画作">
+                            <div class="gallery-overlay">风格 A：日常温馨</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/kashiwagi2/300/400.jpg" alt="黑仪同人画作">
+                            <div class="gallery-overlay">风格 B：傲娇互动</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/kashiwagi3/300/400.jpg" alt="黑仪同人画作">
+                            <div class="gallery-overlay">风格 C：忧郁特写</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/kashiwagi4/300/400.jpg" alt="黑仪同人画作">
+                            <div class="gallery-overlay">风格 D：动态场景</div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- 右侧侧边栏 -->
+            <aside class="sidebar">
+                <div class="sidebar-widget card">
+                    <h3 class="sidebar-title">相关关键词</h3>
+                    <div>
+                        <a href="#" class="tag">神原秋人</a>
+                        <a href="#" class="tag">阿良良木历</a>
+                        <a href="#" class="tag">千石抚子</a>
+                        <a href="#" class="tag">羽川翼</a>
+                        <a href="#" class="tag">吸血鬼</a>
+                        <a href="#" class="tag">西尾维新</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget card">
+                    <h3 class="sidebar-title">推荐阅读</h3>
+                    <div class="list-item">
+                        <span class="icon">→</span>
+                        <a href="#">《伤物语》剧情详解</a>
+                    </div>
+                    <div class="list-item">
+                        <span class="icon">→</span>
+                        <a href="#">战场原与阿良良木的关系演变</a>
+                    </div>
+                    <div class="list-item">
+                        <span class="icon">→</span>
+                        <a href="#">物语系列的世界观设定</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget card">
+                    <h3 class="sidebar-title">角色语录</h3>
+                    <blockquote style="font-style: italic; color: #555; font-size: 0.9rem; border-left: 3px solid var(--accent-color); padding-left: 10px; margin-bottom: 10px;">
+                        “啊，真是的……你这家伙，到底在想些什么啊？”
+                    </blockquote>
+                    <blockquote style="font-style: italic; color: #555; font-size: 0.9rem; border-left: 3px solid var(--accent-color); padding-left: 10px;">
+                        “愤怒是美丽的。”
+                    </blockquote>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 角色志 - 专注于ACG角色深度解析与同人鉴赏</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #bdc3c7;">本站内容仅供交流与学习，不涉及任何商业用途。所有角色版权归西尾维新及Aniplex等版权方所有。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
