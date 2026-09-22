@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT狂人第三季高清全集在线观看，涵盖最新科技资讯、极客生活、软件测评及数码评测，为您带来最前沿的IT娱乐体验。">
+    <meta name="keywords" content="IT狂人第三季,IT狂人,科技视频,极客生活,数码评测,高清在线观看">
+    <title>IT狂人第三季-高清全集在线观看与科技资讯平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+            --radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), var(--bg-dark)), url('https://picsum.photos/seed/techhero/1920/1080.jpg') center/cover no-repeat;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 30px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Video Grid Section */
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-link {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 210, 255, 0.3);
+        }
+
+        .card-thumb {
+            position: relative;
+            height: 160px;
+            background-color: #000;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .video-card:hover .card-thumb img {
+            opacity: 1;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent white;
+            margin-left: 4px;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background: linear-gradient(180deg, var(--bg-dark), #162032);
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Info / About Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .info-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-list {
+            margin-top: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .info-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: var(--radius);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .rank-num.top-3 {
+            background: var(--accent);
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1120;
+            padding: 60px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">IT狂人</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">最新更新</a></li>
+                <li><a href="#">经典回顾</a></li>
+                <li><a href="#">极客社区</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn">🔍 搜索</button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">第三季 · 全新上线</span>
+            <h1>探索数字世界的无限可能</h1>
+            <p>IT狂人第三季为您带来更硬核的科技测评、更深入的极客生活分享以及前沿技术的深度解析。从智能家居到人工智能，跟随我们的脚步，解码未来。</p>
+            <div>
+                <button class="btn btn-primary">立即观看全集 ▶</button>
+                <button class="btn btn-outline">加入收藏夹</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Latest Episodes -->
+        <section>
+            <div class="section-title">
+                <span>最新剧集</span>
+                <a href="#" class="section-link">查看更多 ></a>
+            </div>
+            <div class="video-grid">
+                <!-- Card 1 -->
+                <article class="video-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/tech1/400/225" alt="第三季第1集预告">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第三季第1集：智能家居的终极进化</h3>
+                        <div class="card-meta">
+                            <span class="tag">生活</span>
+                            <span>25:30</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article class="video-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/tech2/400/225" alt="VR设备深度评测">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">VR设备深度评测：沉浸式体验报告</h3>
+                        <div class="card-meta">
+                            <span class="tag">测评</span>
+                            <span>32:15</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="video-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/tech3/400/225" alt="极客装机实战">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">极客装机实战：打造超静音工作站</h3>
+                        <div class="card-meta">
+                            <span class="tag">教程</span>
+                            <span>18:45</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article class="video-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/tech4/400/225" alt="网络安全攻防">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">网络安全攻防：黑客眼中的世界</h3>
+                        <div class="card-meta">
+                            <span class="tag">科技</span>
+                            <span>28:10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Features / Why Watch -->
+        <section class="feature-section">
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🚀</span>
+                    <h3>前沿科技</h3>
+                    <p>第一时间掌握全球最新科技动态与趋势分析。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔍</span>
+                    <h3>硬核评测</h3>
+                    <p>拒绝水军，只做真实客观的产品深度体验。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💡</span>
+                    <h3>实用技巧</h3>
+                    <p>分享提升效率的数码工具与极客玩法。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Info -->
+        <section class="info-section">
+            <div class="info-content">
+                <h2>关于《IT狂人第三季》</h2>
+                <p>《IT狂人》是一档深受科技爱好者喜爱的视频节目。第三季在延续前两季幽默风趣风格的同时，内容更加聚焦于“智能生活”与“数字未来”。本季邀请了多位行业专家参与访谈，并深入科技前沿实验室，为您呈现最真实的科技体验。</p>
+                <p>无论您是科技小白还是资深极客，IT狂人都能为您带来价值。我们致力于打破技术与生活的壁垒，让科技更好地服务于人类生活。</p>
+                <ul class="info-list">
+                    <li>高清画质，支持多端投屏</li>
+                    <li>每周更新一期，保持内容新鲜度</li>
+                    <li>专业的后期制作与字幕支持</li>
+                </ul>
+            </div>
+            <aside class="sidebar">
+                <h3>热门排行</h3>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num top-3">1</span>
+                        <a href="#">第三季第5集：AI绘画实战指南</a>
+                    </li>
+                    <li>
+                        <span class="rank-num top-3">2</span>
+                        <a href="#">第二季度：新能源汽车深度解析</a>
+                    </li>
+                    <li>
+                        <span class="rank-num top-3">3</span>
+                        <a href="#">经典回顾：第一季高能剪辑版</a>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <a href="#">第三季第2集：5G时代的改变</a>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <a href="#">极客访谈：独立开发者的一天</a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">IT狂人</div>
+                <p>专注科技资讯与极客生活分享，连接每一个热爱技术的灵魂。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">节目列表</a></li>
+                    <li><a href="#">投稿合作</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>内容分类</h4>
+                <ul>
+                    <li><a href="#">数码评测</a></li>
+                    <li><a href="#">软件教程</a></li>
+                    <li><a href="#">极客生活</a></li>
+                    <li><a href="#">科技新闻</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">Bilibili</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 IT狂人. All Rights Reserved. 本网站内容仅供学习交流使用。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
