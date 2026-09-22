@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="原液怎么涂？本指南详细解析精华液、肌底液、爽肤水及特护原液的正确涂抹顺序、手法与用量，帮助您提升护肤吸收率，发挥产品最大功效。">
+    <meta name="keywords" content="原液怎么涂,护肤步骤,精华液用法,原液涂抹手法,护肤教程">
+    <title>原液怎么涂 - 护肤原液正确涂抹顺序与手法指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5d7b8f;
+            --secondary-color: #e8f0f3;
+            --accent-color: #d4a373;
+            --text-dark: #2c3e50;
+            --text-light: #64748b;
+            --bg-color: #f8fafc;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        ul { list-style: none; }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* 核心步骤卡片 */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(0,0,0,0.03);
+            line-height: 1;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .step-detail {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* 产品分类指南 */
+        .guide-section {
+            background: var(--white);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -8px;
+        }
+
+        .guide-image {
+            width: 100%;
+            height: 350px;
+            background-color: #eee;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .guide-image::after {
+            content: "示意图：不同原液的手法区别";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 8px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background: var(--secondary-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 16px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .faq-question:hover {
+            background-color: #f8fafc;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+        }
+
+        .faq-item .faq-question::before {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--text-dark);
+            color: #94a3b8;
+            padding: 40px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-links { display: none; }
+            .guide-grid { grid-template-columns: 1fr; }
+            .guide-image { height: 250px; order: -1; }
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    护肤原液指南
+                </div>
+                <div class="nav-links">
+                    <a href="#basics">基础步骤</a>
+                    <a href="#types">产品分类</a>
+                    <a href="#tips">涂抹技巧</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>原液怎么涂</h1>
+                <p>掌握正确的涂抹顺序与手法，让每一滴原液都能被肌肤有效吸收，发挥其最佳功效。</p>
+                <div class="hero-tags">
+                    <span class="tag">精华液涂抹</span>
+                    <span class="tag">爽肤水原液</span>
+                    <span class="tag">护肤流程</span>
+                    <span class="tag">吸收技巧</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="basics">
+            <div class="container">
+                <div class="section-title">
+                    <h2>原液涂抹核心步骤</h2>
+                    <p>原液通常质地浓稠，活性成分高，涂抹顺序直接决定了护肤效果。</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">洗</div>
+                        <h3>清洁与补水</h3>
+                        <p>使用温和洁面产品清洁面部后，先用爽肤水或收敛水进行二次清洁和基础补水。</p>
+                        <div class="step-detail">
+                            <strong>关键点：</strong>确保面部无残留洁面泡沫，保持皮肤湿润状态，便于后续原液吸收。
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">涂</div>
+                        <h3>涂抹原液</h3>
+                        <p>取适量原液于掌心，双手揉搓温热后，按压上脸。避免用力涂抹，以免拉扯皮肤。</p>
+                        <div class="step-detail">
+                            <strong>关键点：</strong>原液通常比精华液更浓缩，用量需严格控制，建议全脸 2-3 滴即可。
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">按</div>
+                        <h3>掌心温热按压</h3>
+                        <p>将手掌覆盖在面部原液上，利用掌心温度加速成分渗透，轻轻按压直至吸收。</p>
+                        <div class="step-detail">
+                            <strong>关键点：</strong>按压动作代替摩擦，能有效减少角质层受损，促进吸收。
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">锁</div>
+                        <h3>后续锁水</h3>
+                        <p>原液吸收后，根据肤质使用乳液或面霜进行封闭保湿，防止原液中的水分蒸发。</p>
+                        <div class="step-detail">
+                            <strong>关键点：</strong>干性肌肤建议先涂原液再涂乳液；油性肌肤可减少面霜用量或使用清爽质地。
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="guide-section">
+            <div class="container">
+                <div class="guide-grid">
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/skincare/600/400.jpg" alt="护肤产品示意图">
+                    </div>
+                    <div class="guide-content">
+                        <h3>不同类型原液的涂抹区别</h3>
+                        <p>原液种类繁多，针对不同需求，涂抹时的侧重点也有所不同。</p>
+                        <ul class="guide-list">
+                            <li><strong>美白原液（如烟酰胺、VC）：</strong>建议在夜间护肤步骤中使用，白天需配合防晒。涂抹后可叠加保湿乳液，避免过度干燥。</li>
+                            <li><strong>保湿原液（如玻尿酸、氨基酸）：</strong>质地通常较稀，可作为爽肤水的补充，直接拍打至吸收即可，无需额外按摩。</li>
+                            <li><strong>抗老原液（如视黄醇、胜肽）：</strong>需要建立耐受。初期建议隔天使用，避开眼周，涂抹后加强保湿，避免叠加其他刺激性产品。</li>
+                            <li><strong>修复原液（如积雪草、神经酰胺）：</strong>适用于泛红、敏感期。使用量可稍多，配合厚涂面霜形成保护膜。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="container">
+            <div class="section-title">
+                <h2>提升吸收率的实用技巧</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" style="border-left: 4px solid var(--primary-color);">
+                    <h3>掌心乳化法</h3>
+                    <p>对于油溶性原液，取一滴于掌心，用另一只手的手指蘸取少量乳液混合，搓热后按压上脸。</p>
+                </div>
+                <div class="step-card" style="border-left: 4px solid var(--primary-color);">
+                    <h3>分区重点涂抹</h3>
+                    <p>T区出油可少涂，U区和干燥部位可多涂。眼周单独使用眼霜，避开直接接触眼周肌肤。</p>
+                </div>
+                <div class="step-card" style="border-left: 4px solid var(--primary-color);">
+                    <h3>热毛巾辅助</h3>
+                    <p>洗脸后趁毛孔张开时涂抹原液，或用热毛巾敷脸 1 分钟，能显著增加角质层通透性。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">原液可以代替面霜吗？</div>
+                        <div class="faq-answer">通常不建议。原液主要提供高浓度的活性成分，而面霜负责封闭保湿。长期只用原液可能导致皮肤屏障功能下降，建议在原液后使用质地合适的面霜。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">原液涂在脸上刺痛是怎么回事？</div>
+                        <div class="faq-answer">刺痛可能是因为皮肤缺水、角质层受损或对成分不耐受。建议先进行耳后测试，如刺痛持续，应立即停用并清洗面部。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">原液需要每天涂吗？</div>
+                        <div class="faq-answer">视原液种类而定。美白、抗老类原液建议每天使用；修护、舒缓类原液在皮肤状态不佳时使用即可。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>护肤原液指南</h4>
+                    <p>致力于为用户提供专业、科学的护肤原液使用指南，帮助您建立正确的护肤流程。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关内容</h4>
+                    <ul>
+                        <li><a href="#">精华液与原液的区别</a></li>
+                        <li><a href="#">护肤成分百科</a></li>
+                        <li><a href="#">敏感肌护理指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>使用提示</h4>
+                    <ul>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 护肤原液指南. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴效果
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
